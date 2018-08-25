@@ -1,0 +1,90 @@
+body{
+    height: 98vh;
+    background-color: rgb(92, 44, 17);
+    margin: auto;
+    width: 90%;
+}
+h1{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+main{
+    grid-template-rows: 300px 200px 300px 200px 300px 200px;
+    grid-template-columns: 45% 1fr;
+    display: grid;
+    grid-row: span 1;
+    grid-column: span 1;
+    grid-gap: 5px;
+}
+.beHappy{
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 100px;
+}
+.tie{
+    grid-column: span 2;
+    background-image: url("images/tie.png");
+}
+.moped{
+    grid-column: span 2;
+    background-image: url("images/moped.jpg");
+}
+.sign{
+    background-image: url("images/sign.jpg");
+}
+.light{
+    background-image: url("images/light.jpg");
+}
+.flower{
+    background-image: url("images/flower.jpg");
+}
+.sax{
+    background-image: url("images/sax.jpg");
+}
+p{
+    background-color: rgb(50, 165, 127);
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+@media only screen and (min-width: 600px){
+    main{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .beHappy{
+        grid-row: span 1;
+    }
+    p{
+        grid-row: span 2;
+    }
+    .tie{
+        grid-row: span 2;
+    }
+    .sign{
+        grid-row: span 2;
+    }
+    .moped{
+        grid-row: span 2;
+        grid-column: span 2;
+        background-size: contain;
+    }
+    .tie{
+        grid-row: span 2;
+    }
+    .sax{
+        background-size: contain;
+    }
+}
